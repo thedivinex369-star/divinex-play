@@ -44,6 +44,7 @@
     flex-direction: column;
     gap: 8px;
   }
+  
   .nav.open { display: flex; }
   .nav a { padding: 10px 0; }
   .nav a::after { display: none; }
