@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090817">
+  <meta name="description" content="DivineX Play — free-to-play social games, daily challenges and virtual coins. No real-money betting.">
+  <title>DivineX Play — Play More. Be More.</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="DivineX Play home"><span class="brand-mark">♛</span><span>DivineX <i>Play</i></span></a>
+    <nav class="nav" aria-label="Main navigation">
+      <a href="#games">Games</a><a href="#daily">Daily bonus</a><a href="#leaderboard">Leaderboard</a><a href="#premium">Premium</a>
+    </nav>
+    <div class="top-actions"><span class="coin-pill">🟡 <b id="coinCount">1000</b> coins</span><button class="btn btn-small btn-outline" id="resetBtn" title="Reset local demo data">Reset demo</button><button class="menu-btn" id="menuBtn" aria-label="Toggle navigation">☰</button></div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="pulse"></span> FREE-TO-PLAY SOCIAL ARCADE</div>
+        <h1>PLAY MORE.<br><span>BE MORE.</span></h1>
+        <p>Quick games. Daily challenges. Friendly competition.<br>Play for fun with virtual coins — never real-money betting.</p>
+        <div class="hero-actions"><a class="btn btn-primary" href="#games">Explore games <span>↗</span></a><a class="btn btn-outline" href="#how">How it works</a></div>
+        <div class="hero-stats"><div><b>04</b><span>Playable demos</span></div><div><b>₹0</b><span>To start</span></div><div><b>100%</b><span>Virtual coins</span></div></div>
+      </div>
+      <div class="hero-art" aria-label="Decorative gaming illustration">
+        <div class="orbit orbit-a"></div><div class="orbit orbit-b"></div>
+        <div class="floating-card fc-one">🎮<small>ARCADE</small></div><div class="floating-card fc-two">🧩<small>PUZZLE</small></div>
+        <div class="gamepad"><div class="pad-cross">✚</div><div class="pad-center">DX</div><div class="pad-buttons"><i></i><i></i><i></i><i></i></div><div class="pad-light"></div></div>
+        <div class="floating-coin coin-a">✦</div><div class="floating-coin coin-b">D</div>
+        <div class="art-caption"><span class="live-dot"></span> YOUR NEXT FAVOURITE GAME AWAITS</div>
+      </div>
+    </section>
+
+    <section class="notice"><span class="notice-icon">ⓘ</span><div><b>Play responsibly</b><p>DivineX Play is a free-to-play demo. Coins are virtual, have no cash value, cannot be bought or withdrawn, and are not prizes.</p></div></section>
+
+    <section class="section" id="games">
+      <div class="section-heading"><div><div class="eyebrow">PICK YOUR PLAYSTYLE</div><h2>Featured <span>games</span></h2></div><div class="filters" id="filters"><button class="filter active" data-filter="all">All games</button><button class="filter" data-filter="arcade">Arcade</button><button class="filter" data-filter="puzzle">Puzzle</button><button class="filter" data-filter="luck">Luck-style demo</button></div></div>
+      <div class="game-grid">
+        <article class="game-card" data-category="luck"><div class="game-cover cover-fruit"><span class="cover-tag">QUICK PLAY</span><div class="fruit-icons">🍒 🍋 🍇</div><span class="cover-big">FRUIT<br>SPIN</span></div><div class="game-info"><div><h3>Fruit Spin Demo</h3><p>Spin for virtual points</p></div><button class="play-btn" data-game="spin" aria-label="Play Fruit Spin">▶</button></div></article>
+        <article class="game-card" data-category="puzzle"><div class="game-cover cover-memory"><span class="cover-tag">BRAIN TRAIN</span><div class="memory-icons">◆ ● ▲</div><span class="cover-big">MEMORY<br>MATCH</span></div><div class="game-info"><div><h3>Memory Match</h3><p>Find matching pairs</p></div><button class="play-btn" data-game="memory" aria-label="Play Memory Match">▶</button></div></article>
+        <article class="game-card" data-category="arcade"><div class="game-cover cover-click"><span class="cover-tag">REACTION</span><div class="target">✦</div><span class="cover-big">STAR<br>RUSH</span></div><div class="game-info"><div><h3>Star Rush</h3><p>Tap stars before time runs out</p></div><button class="play-btn" data-game="rush" aria-label="Play Star Rush">▶</button></div></article>
+        <article class="game-card" data-category="puzzle"><div class="game-cover cover-guess"><span class="cover-tag">LOGIC</span><div class="question-mark">?</div><span class="cover-big">NUMBER<br>GUESS</span></div><div class="game-info"><div><h3>Number Guess</h3><p>Crack the secret number</p></div><button class="play-btn" data-game="guess" aria-label="Play Number Guess">▶</button></div></article>
+      </div>
+    </section>
+
+    <section class="section split-section" id="daily">
+      <div class="daily-panel panel"><div class="eyebrow">COME BACK TOMORROW</div><h2>Your daily<br><span>bonus</span></h2><p>Claim a small virtual-coin bonus once per day. No purchase needed.</p><div class="daily-reward"><span>🪙</span><div><b>+100 coins</b><small>Daily check-in reward</small></div></div><button id="claimBtn" class="btn btn-primary">Claim daily bonus</button><p class="micro" id="dailyMessage" role="status">Available once every calendar day on this device.</p></div>
+      <div class="leader-panel panel" id="leaderboard"><div class="panel-title"><div><div class="eyebrow">FRIENDLY COMPETITION</div><h2>Local leaderboard</h2></div><span class="trophy">🏆</span></div><p class="muted">Demo scores stored only in this browser.</p><div id="leaderRows" class="leader-rows"></div><p class="micro">This is not a global ranking. No personal data is uploaded.</p></div>
+    </section>
+
+    <section class="section how-section" id="how"><div class="section-heading"><div><div class="eyebrow">SIMPLE. SAFE. SOCIAL.</div><h2>How it <span>works</span></h2></div></div><div class="steps"><div class="step"><span>01</span><h3>Choose a game</h3><p>Open any demo game directly in your browser.</p></div><div class="step"><span>02</span><h3>Earn virtual coins</h3><p>Play, practise and track your local score.</p></div><div class="step"><span>03</span><h3>Level up for fun</h3><p>Try challenges and unlock cosmetic ideas later.</p></div></div></section>
+
+    <section class="premium-section" id="premium"><div><div class="eyebrow">COMING LATER</div><h2>Make your play<br><span>personal.</span></h2><p>Premium can offer cosmetic themes, avatar frames and an ad-light experience after the site has users and a compliant monetisation setup.</p><div class="premium-points"><span>✓ Cosmetic themes</span><span>✓ Profile badges</span><span>✓ No gameplay advantage</span></div></div><div class="premium-card"><div class="premium-crown">♛</div><div class="premium-label">DIVINEX PLUS</div><h3>Upgrade your style</h3><p>Premium features are a preview and are not for sale in this demo.</p><button class="btn btn-outline" id="premiumBtn">Notify me later</button><small id="premiumMessage">No payment is collected.</small></div></section>
+
+    <section class="ad-slot" aria-label="Advertising placeholder"><span>ADVERTISEMENT SPACE</span><p>Ad network integration can be added after approval and policy review.</p></section>
+  </main>
+
+  <footer><a class="brand footer-brand" href="#"><span class="brand-mark">♛</span><span>DivineX <i>Play</i></span></a><p>Free-to-play social games for entertainment.</p><div class="footer-links"><a href="#terms">Terms</a><a href="#privacy">Privacy</a><a href="mailto:hello@example.com">Contact</a></div><p class="legal" id="terms">No real-money betting, wagering, cash prizes, deposits or withdrawals. Virtual coins have no monetary value.</p><p class="legal" id="privacy">This starter stores demo progress in your browser's local storage. No account or analytics backend is connected.</p><small>© <span id="year"></span> DivineX Play. Replace the sample contact email before launch.</small></footer>
+
+  <div class="modal-backdrop" id="gameModal" hidden>
+    <section class="game-modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" id="closeModal" aria-label="Close game">×</button><div class="eyebrow">DIVINEX ARCADE</div><h2 id="modalTitle">Game</h2><p id="modalDescription" class="muted"></p><div id="gameArea" class="game-area"></div><div class="modal-footer"><span class="coin-pill">🟡 <b id="modalCoins">1000</b> coins</span><span class="micro">Virtual coins only</span></div>
+    </section>
+  </div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>
